@@ -1,0 +1,210 @@
+/*
+ * Clock.cpp
+ *
+ *  Created on: Feb 19, 2016
+ *      Author: bromley
+ */
+
+#include "Clock.h"
+#include <unistd.h>
+#include <stdlib.h>
+#include "TimedSound.h"
+
+int Clock::stateIdle = 0;
+int Clock::stateError = -1;
+int Clock::stateGetAlarmTime = 1;
+int Clock::stateSetAlarmTime = 2;
+int Clock::stateGetAlarmAm = 3;
+int Clock::statePlayMenu = 4;
+
+
+Clock::Clock(): clockState(0), numDigitsReceived(0),
+		ambientLightIntensity(1024), volume(75) {
+}
+
+Clock::~Clock() {
+	delete timedSound;
+}
+void Clock::start() {
+	pixelRing.start();
+	serialReader.setClock(this);
+	serialReader.start();
+	//audioPlayer.start(); // not needed
+	timedSound = new TimedSound();
+	timedSound->setClock(this);
+	timedSound->start();
+}
+
+void Clock::playAudio(string pathName) {
+	audioPlayer.setFilePath(pathName);
+	audioPlayer.play();
+}
+
+void Clock::chime(vector<string> filePaths) {
+	for (size_t i = 0; i < filePaths.size(); i++) {
+		audioPlayer.setFilePath(filePaths[i]);
+		cout << "Setting Audio path to " << filePaths[i] << endl;
+		audioPlayer.play();
+		while (audioPlayer.isPlaying())
+			sleep(1);
+	}
+}
+
+void Clock::serialCommand(string& command) {
+	cout << "Clock Got Serial Command " << command;
+	string value = "Mute";
+	size_t position = command.find(value);
+	if (position != std::string::npos) {
+		toggleMuteChime();
+		return;
+	}
+	value = "Light: ";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(7);
+		parseLightIntensity(substring);
+		return;
+	}
+	value = "Power";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(7);
+		// do something
+		return;
+	}
+	value = "Source";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(8);
+		// do something
+		return;
+	}
+	value = "Record";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(8);
+		// do something
+		return;
+	}
+	value = "Ch+";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(5);
+		// do something
+		return;
+	}
+	value = "TimeShift";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(11);
+		// do something
+		return;
+	}
+	value = "Vol-";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(6);
+		// do something
+		return;
+	}
+	value = "FullScreen";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(12);
+		// do something
+		return;
+	}
+	value = "Vol+";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(6);
+		// do something
+		return;
+	}
+	value = "Ch-";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(5);
+		// do something
+		return;
+	}
+	value = "Recall";
+	position = command.find(value);
+	if (position != std::string::npos) {
+		string substring = command.substr(8);
+		// do something
+		return;
+	}
+}
+
+void Clock::parseLightIntensity(string valueString) {
+	//cout << "Light Substring is " << valueString << endl;
+	int value = atoi(valueString.c_str());
+	//cout << "Light value is " << value << endl;
+	ambientLightIntensity = value;
+}
+
+int Clock::parseDigit(string digitString) {
+	int value = -1;
+	if (digitString.compare("Zero") == 0)
+		value = 0;
+	if (digitString.compare("One") == 0)
+		value = 1;
+	if (digitString.compare("Two") == 0)
+		value = 2;
+	if (digitString.compare("Three") == 0)
+		value = 3;
+	if (digitString.compare("Four") == 0)
+		value = 4;
+	if (digitString.compare("Five") == 0)
+		value = 5;
+	if (digitString.compare("Six") == 0)
+		value = 6;
+	if (digitString.compare("Seven") == 0)
+		value = 7;
+	if (digitString.compare("Eight") == 0)
+		value = 8;
+	if (digitString.compare("Nine") == 0)
+		value = 9;
+	return value;
+}
+
+void Clock::toggleMuteChime() {
+	bool state = timedSound->isChimeDisable();
+	state = !state;
+	timedSound->setChimeDisable(true);
+	if (state == true) {
+		// did not work right playAudio("/home/bromley/audio/commands/chimeIsDisabled.wav");
+		audioPlayer.setFilePath("/home/bromley/audio/commands/chimeIsDisabled.wav");
+		audioPlayer.play();
+	} else {
+		audioPlayer.setFilePath("/home/bromley/audio/commands/chimeIsEnabled.wav");
+		audioPlayer.play();
+		// did not work right playAudio("/home/bromley/audio/commands/chimeIsEnabled.wav");
+	}
+	timedSound->setChimeDisable(state);
+}
+
+void Clock::setBrightness(unsigned char brightness) {
+	pixelRing.setBrightness(brightness);
+}
+
+void Clock::scaleBrightnessToAmbientLight() {
+	int temp = ambientLightIntensity / 4;
+	if (temp > 255)
+		temp = 255;
+	setBrightness((unsigned char)temp);
+}
+void setVolume();
+int getVolume();
+
+int main(int argc, char** argv) {
+	Clock* clock = new Clock();
+	clock->start();
+	unsigned char brightness = 255;
+	while(true) {
+		sleep(1);
+		clock->scaleBrightnessToAmbientLight	();
+	}
+	return 0;
+}

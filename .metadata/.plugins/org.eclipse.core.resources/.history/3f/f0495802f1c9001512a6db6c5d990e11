@@ -1,0 +1,18 @@
+CXX = g++ -c -g 
+
+%.o : %.cpp
+	$(CXX) $< -o $@
+
+SOURCES = $(wildcard *.cpp)
+
+OBJS = $(patsubst %.cpp, %.o, $(SOURCES))
+
+# On arm, needs -wl, --no-as-needed link flags -- bug in gcc
+all: $(OBJS)
+	rm -rf libSerial.a
+	ar -qcs libAbsoluteMemory.a PosixSignalDispatcher.o SerialPort.o SerialStream.o \
+		SerialStreamBuf.o
+	
+clean:
+	rm -f *.o
+	rm -f *.a

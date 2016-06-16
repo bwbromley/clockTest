@@ -1,0 +1,9 @@
+16:47:40 **** Build of configuration Default for project LinuxUtilities ****
+make clean 
+rm -f *.o 
+rm -f simple_server
+rm -f simple_client
+rm -f serialPort
+
+16:47:40 Build Finished (took 67ms)
+

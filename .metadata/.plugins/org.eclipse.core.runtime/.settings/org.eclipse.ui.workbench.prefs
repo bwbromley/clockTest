@@ -1,0 +1,10 @@
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation\tTorg.eclipse.jdt.ui.presentation\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.ui.workbench.texteditor.blockSelectionModeFont
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+eclipse.preferences.version=1
+org.eclipse.cdt.ui.buildconsole.ConsoleFont=1|Droid Sans|9.0|0|GTK|1|;
+org.eclipse.cdt.ui.editors.textfont=1|Droid Sans|9.0|0|GTK|1|;
+org.eclipse.jdt.ui.PropertiesFileEditor.textfont=1|Monospace|9.0|0|GTK|1|;
+org.eclipse.jdt.ui.editors.textfont=1|Monospace|9.0|0|GTK|1|;
+org.eclipse.jface.textfont=1|Monospace|9.0|0|GTK|1|;
+org.eclipse.ui.workbench.texteditor.blockSelectionModeFont=1|Monospace|9.0|0|GTK|1|;

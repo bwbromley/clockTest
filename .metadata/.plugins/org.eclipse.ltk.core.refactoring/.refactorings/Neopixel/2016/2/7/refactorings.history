@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Neopixel/Clock.cpp&apos; to &apos;Clock.c&apos;" description="Rename resource &apos;Clock.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Clock.cpp" name="Clock.c" stamp="1455053686341" updateReferences="true"/>
+</session>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;LibSerial/read_port.cpp&apos; to &apos;readPort.cpp&apos;" description="Rename resource &apos;read_port.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="read_port.cpp" name="readPort.cpp" stamp="1454710604209" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;LibSerial/Copy of read_portOrig.cpp&apos; to &apos;read_portOrig.cpp&apos;" description="Rename resource &apos;Copy of read_portOrig.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Copy of read_portOrig.cpp" name="read_portOrig.cpp" stamp="1454710755643" updateReferences="true"/>
+</session>

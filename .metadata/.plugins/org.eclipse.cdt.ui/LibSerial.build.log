@@ -1,0 +1,16 @@
+16:13:26 **** Build of configuration Default for project LibSerial ****
+make all 
+g++ -c -g PosixSignalDispatcher.cpp -o PosixSignalDispatcher.o
+g++ -c -g readPort.cpp -o readPort.o
+g++ -c -g read_portOrig.cpp -o read_portOrig.o
+g++ -c -g SerialPort.cpp -o SerialPort.o
+g++ -c -g SerialStreamBuf.cpp -o SerialStreamBuf.o
+g++ -c -g SerialStream.cpp -o SerialStream.o
+g++ -c -g write_port.cpp -o write_port.o
+rm -rf libSerial.a
+ar -qcs libSerial.a PosixSignalDispatcher.o SerialPort.o SerialStream.o \
+		SerialStreamBuf.o 
+g++ -o readPort readPort.o -L./ -lSerial 
+
+16:14:03 Build Finished (took 37s.270ms)
+

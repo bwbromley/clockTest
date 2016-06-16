@@ -1,0 +1,16 @@
+/*
+ * Clock.h
+ *
+ *  Created on: Feb 9, 2016
+ *      Author: bromley
+ */
+
+#ifndef CLOCK_H_
+#define CLOCK_H_
+
+void render();
+void moveUp();
+void bottom();
+static void setup_handlers();
+
+#endif /* CLOCK_H_ */

@@ -1,0 +1,7 @@
+09:47:50 **** Build of configuration Default for project Alsa ****
+make all 
+g++ -c -g Player.cpp -o Player.o
+#g++ -g -o play Player.o -lasound
+
+09:47:56 Build Finished (took 5s.507ms)
+

@@ -1,0 +1,264 @@
+/*
+ * PixelRing.cpp
+ *
+ *  Created on: Feb 18, 2016
+ *      Author: bromley
+ */
+
+#include "PixelRing.h"
+#include "Clock.h"
+
+#include <signal.h>
+#include <unistd.h>
+
+#define ARRAY_SIZE(stuff) (sizeof(stuff) / sizeof(stuff[0]))
+
+#define TARGET_FREQ WS2811_TARGET_FREQ
+#define GPIO_PIN 18
+#define DMA 5
+
+ws2811_t PixelRing::ledstring;
+
+
+PixelRing::PixelRing () {
+	initializeIt();
+}
+
+PixelRing::~PixelRing() {
+}
+
+void PixelRing::initializeIt() {
+	disabled = false;
+	ledstring.freq = TARGET_FREQ;
+	ledstring.dmanum = DMA;
+	ledstring.channel[0].gpionum = GPIO_PIN;
+	ledstring.channel[0].count = LED_COUNT;
+	ledstring.channel[0].invert = 0;
+	ledstring.channel[0].brightness = 255;
+	ledstring.channel[1].gpionum = 0;
+	ledstring.channel[1].count = 0;
+	ledstring.channel[1].invert = 0;
+	ledstring.channel[1].brightness = 0;
+}
+ws2811_t*  PixelRing::getLedstring() {
+	return &ledstring;
+}
+
+/**
+ * Don't really need this.  Could just set ledstring.channel[0].leds[i] directly
+ */
+void PixelRing::render() {
+	for (int i = 0; i < HEIGHT; i++) {
+		ledstring.channel[0].leds[i] = clockArray[i];
+	}
+}
+
+void PixelRing::clear() {
+	int i;
+	for (i = 0; i < HEIGHT; i++)
+		clockArray[i] = 0;
+}
+
+void PixelRing::setAlarmValue(int value) {
+	alarmValue = value;
+}
+
+void PixelRing::advanceSecond() {
+	int i;
+	int status;
+	for (i = 0; i < 60; i++) {
+		clear();
+		showHourMarks();
+		showSecond();
+		render();
+		status = ws2811_render(&ledstring);
+		uint32_t sleepTime = 1000000;
+		usleep(sleepTime);
+	}
+}
+
+void PixelRing::setDisabled(bool value) {
+	disabled = value;
+}
+
+bool PixelRing::getDisabled() {
+	return disabled;
+}
+
+void PixelRing::showTime() {
+	if (disabled)
+		return;
+	getLocalTime();
+	clear();
+	showHour();
+	showHourMarks();
+	showMinute();
+	showSecond();
+	render();
+	ws2811_render(&ledstring);
+}
+
+void PixelRing::showHour() {
+	if (hour == 12)
+		hour = 0;
+	int temp = hour * 5;
+	temp += minute / 12;
+	int index = pixelsToMinutes[temp];
+	if (index == 0) {
+		clockArray[0] = purple; // set this pixel to blue
+		clockArray[59] = lightPurple;
+		clockArray[1] = lightPurple;
+		return;
+	}
+	if (index == 59) {
+		clockArray[59] = purple; // set this pixel to blue
+		clockArray[58] = lightPurple;
+		clockArray[0] = lightPurple;
+		return;
+	}
+	clockArray[index] = purple; // set this pixel to blue
+	clockArray[index - 1] = lightPurple;
+	clockArray[index + 1] = lightPurple;
+}
+
+void PixelRing::showMinute() {
+	if (minute == 60)
+		minute = 0;
+	int index = pixelsToMinutes[minute];
+	//clockArray[index] = 0xff0000; // set this pixel to red
+	clockArray[index] = green; // set this pixel to red
+}
+
+void PixelRing::showSecond() {
+	if (second == 60)
+		second = 0;
+	int index = pixelsToMinutes[second];
+	//clockArray[index] = 0xff0000; // set this pixel to red
+	clockArray[index] = lightRed; // set this pixel to red
+}
+
+void PixelRing::getLocalTime() {
+	localTime = time(NULL);
+	struct tm time = *localtime(&localTime);
+	hour = time.tm_hour;
+	hour = hour % 12;
+	minute = time.tm_min;
+	second = time.tm_sec;
+}
+
+void PixelRing::showPixel(int index) {
+	clear();
+	clockArray[index] = 0xff0000;	render();
+	ws2811_render(&ledstring);
+}
+void PixelRing::fastForward() {
+	hour = 0;
+	minute = 0;
+	second = 0;
+	int i;
+	while(1) {
+		second++;
+		if ((second % 60 == 0) && (second != 0)) {
+			second = 0;
+			minute ++;
+		}
+		if ((minute % 60 == 0) && (minute != 0)) {
+			minute = 0;
+			hour ++;
+		}
+		if ((hour %12 == 0) && (hour != 0))
+			hour = 0;
+		clear();
+		showHour();
+		showHourMarks();
+		showMinute();
+		showSecond();
+		render();
+		ws2811_render(&ledstring);
+		usleep(10000);
+	}
+}
+/**
+ * Mark the hours
+ */
+void PixelRing::showHourMarks() {
+	int i;
+	for (i = 0; i < 12; i++) {
+		int index =pixelsToMinutes[ i * 5];
+		clockArray[index] = 0x202020; // light white
+	}
+}
+
+void controlC(int signum) {
+	ws2811_fini(PixelRing::getLedstring());
+}
+
+void setupHandlers() {
+	struct sigaction sa;
+	sa.sa_handler = controlC;
+	sigaction(SIGKILL, &sa, NULL);
+}
+/**
+ * Pure virtual implementation
+ */
+void PixelRing::performCommand(int command)  {
+	cout << "ClockPart got command " << command << endl;
+	mutex.lock();
+	whatToDo = command;
+	mutex.unlock();
+}
+/**
+ * Pure virtual implementation
+ */
+void PixelRing::start()  {
+	cout << "Pixle Ring thread started" << endl;
+	thread = std::thread(&PixelRing::threadBody, this);
+}
+/**
+ * Pure virtual implementation
+ */
+void PixelRing::threadBody() {
+	int status = board_info_init();
+	if (status < 0) {
+		return;
+	}
+	setupHandlers();
+	status = ws2811_init(&ledstring);
+	if (status) {
+		return;
+	}
+	while (whatToDo != -1) {
+		showTime();
+		usleep(1000000);
+	}
+	ws2811_fini(&ledstring);
+}
+
+void PixelRing::chime() {
+	//clock->chime();
+}
+void PixelRing::setBrightness(unsigned char brightness) {
+	ledstring.channel[0].brightness = brightness;
+}
+
+int mainNOT(int argc, char *argv[]) {
+	PixelRing * clock = new PixelRing();
+	int ret = 0;
+	int status = board_info_init();
+	if (status < 0) {
+		return -1;
+	}
+	setupHandlers();
+	status = ws2811_init(&clock->ledstring);
+	if (status) {
+		return -1;
+	}
+	while (1) {
+		//showPixel(6);
+		//fastForward();
+		clock->showTime();
+		usleep(1000000);
+	}
+	ws2811_fini(&clock->ledstring);
+	return ret;
+}

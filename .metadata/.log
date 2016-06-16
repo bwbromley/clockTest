@@ -1,0 +1,589 @@
+!SESSION 2016-01-28 14:50:53.173 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-01-28 14:55:09.518
+!MESSAGE Indexed 'Neopixel' (6 sources, 95 headers) in 32.62 sec: 2,848 declarations; 4,763 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2016-01-29 07:45:31.964 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.ui 4 2 2016-01-29 08:50:00.512
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.cdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:47)
+	at org.eclipse.jface.text.rules.RuleBasedScanner.checkRange(RuleBasedScanner.java:120)
+	at org.eclipse.jface.text.rules.RuleBasedScanner.setRange(RuleBasedScanner.java:92)
+	at org.eclipse.jface.text.rules.BufferedRuleBasedScanner.setRange(BufferedRuleBasedScanner.java:98)
+	at org.eclipse.cdt.internal.ui.text.spelling.CSpellingEngine.check(CSpellingEngine.java:133)
+	at org.eclipse.cdt.internal.ui.text.spelling.SpellingEngine.check(SpellingEngine.java:73)
+	at org.eclipse.cdt.internal.ui.text.spelling.CSpellingService$1.run(CSpellingService.java:58)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.ui.text.spelling.CSpellingService.check(CSpellingService.java:64)
+	at org.eclipse.ui.texteditor.spelling.SpellingReconcileStrategy.reconcile(SpellingReconcileStrategy.java:198)
+	at org.eclipse.cdt.internal.ui.text.spelling.CSpellingReconcileStrategy.reconcile(CSpellingReconcileStrategy.java:121)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:358)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-01 10:34:21.320
+!MESSAGE Indexed 'LinuxUtilities' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2016-02-02 12:25:57.335 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-02 12:28:29.335
+!MESSAGE Indexed 'LibSerial' (0 sources, 0 headers) in 0.02 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2016-02-02 16:13:05.819 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_95
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-02 16:13:26.563
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.jobs 2 2 2016-02-02 16:20:33.613
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2016-02-02 16:20:33.620
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3
+!SESSION 2016-02-02 16:22:22.083 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-02 16:23:48.135
+!MESSAGE Indexed 'LibSerial' (6 sources, 247 headers) in 39.70 sec: 16,661 declarations; 30,862 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-02 16:25:14.409
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-02 16:45:29.402 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-02 16:46:35.361
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-05 10:06:13.783 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-05 10:11:52.603
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-05 15:24:46.580 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-05 15:27:02.234
+!MESSAGE Indexed 'Alsa' (0 sources, 0 headers) in 0.03 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-05 15:36:27.269
+!MESSAGE Indexed 'Alsa' (1 sources, 83 headers) in 7.95 sec: 6,922 declarations; 5,291 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.01%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-05 15:57:45.317
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-05 16:30:52.845
+!MESSAGE Indexed 'Alsa' (1 sources, 84 headers) in 10.18 sec: 6,916 declarations; 5,273 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-06 05:30:35.109
+!MESSAGE Indexed 'Alsa' (2 sources, 176 headers) in 27.39 sec: 15,891 declarations; 22,059 references; 0 unresolved inclusions; 0 syntax errors; 4 unresolved names (0.01%)
+!SESSION 2016-02-06 15:25:01.528 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-06 15:28:32.007
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-06 17:35:09.467 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-06 17:37:20.688
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-07 12:47:06.288
+!MESSAGE Indexed 'Alsa' (5 sources, 286 headers) in 46.39 sec: 24,594 declarations; 34,531 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.00%)
+!SESSION 2016-02-07 16:06:35.599 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-07 16:08:02.181
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-09 08:02:41.380 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-09 08:04:00.625
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-09 10:08:46.362 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-09 10:09:00.408
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-09 10:10:00.898
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-09 12:03:33.999 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-09 12:04:46.978
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-10 09:01:08.908
+!MESSAGE Indexed 'Neopixel' (13 sources, 109 headers) in 8.07 sec: 3,485 declarations; 6,387 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+!SESSION 2016-02-10 10:16:45.732 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-10 10:17:00.873
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-10 10:18:04.692
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-11 06:50:06.881 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-11 06:51:11.511
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-11 11:32:02.724 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-11 11:32:52.754
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-12 06:11:55.310 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-12 06:15:21.369
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.ui 4 0 2016-02-12 06:41:15.704
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element Clock.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:566)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:367)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:358)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2016-02-12 06:41:15.717
+!MESSAGE Element Clock.c does not exist.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-16 16:06:02.508
+!MESSAGE Indexed 'Clock' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-17 06:14:19.164
+!MESSAGE Indexed 'Clock' (1 sources, 34 headers) in 1.95 sec: 777 declarations; 1,035 references; 2 unresolved inclusions; 3 syntax errors; 2 unresolved names (0.11%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-17 06:17:17.598
+!MESSAGE Indexed 'Clock' (1 sources, 40 headers) in 1.54 sec: 857 declarations; 1,100 references; 0 unresolved inclusions; 3 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-17 06:20:42.522
+!MESSAGE Indexed 'Clock' (1 sources, 40 headers) in 1.54 sec: 857 declarations; 1,100 references; 0 unresolved inclusions; 3 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-18 06:04:28.761
+!MESSAGE Indexed 'ThreadTest' (0 sources, 0 headers) in 0.00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-18 06:19:41.168
+!MESSAGE Indexed 'ThreadTest' (2 sources, 104 headers) in 14.17 sec: 8,199 declarations; 14,237 references; 0 unresolved inclusions; 1 syntax errors; 5 unresolved names (0.02%)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2016-02-18 06:36:39.766
+!MESSAGE Error
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:47)
+	at org.eclipse.cdt.internal.ui.text.CHeuristicScanner.scanBackward(CHeuristicScanner.java:884)
+	at org.eclipse.cdt.internal.ui.text.CHeuristicScanner.previousToken(CHeuristicScanner.java:432)
+	at org.eclipse.cdt.internal.ui.text.CHeuristicScanner$TokenStream.previousToken(CHeuristicScanner.java:1228)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.inUsingDeclaration(DOMCompletionProposalComputer.java:169)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.handleFunction(DOMCompletionProposalComputer.java:482)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.handleBinding(DOMCompletionProposalComputer.java:350)
+	at org.eclipse.cdt.internal.ui.text.contentassist.DOMCompletionProposalComputer.computeCompletionProposals(DOMCompletionProposalComputer.java:145)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ParsingBasedProposalComputer.computeCompletionProposals(ParsingBasedProposalComputer.java:56)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:294)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:261)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:260)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:213)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:1839)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:566)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$16(CompletionProposalPopup.java:563)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$2.run(CompletionProposalPopup.java:498)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:492)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:378)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3537)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3189)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-18 07:51:11.423
+!MESSAGE Indexed 'ThreadTest' (3 sources, 111 headers) in 17.84 sec: 8,921 declarations; 14,814 references; 0 unresolved inclusions; 1 syntax errors; 24 unresolved names (0.10%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 07:34:00.108
+!MESSAGE Indexed 'Clock' (3 sources, 129 headers) in 18.56 sec: 9,415 declarations; 15,282 references; 0 unresolved inclusions; 1 syntax errors; 9 unresolved names (0.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 07:37:31.820
+!MESSAGE Indexed 'Clock' (3 sources, 129 headers) in 15.43 sec: 9,415 declarations; 15,282 references; 0 unresolved inclusions; 1 syntax errors; 9 unresolved names (0.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 07:39:51.342
+!MESSAGE Indexed 'Clock' (3 sources, 129 headers) in 15.19 sec: 9,415 declarations; 15,282 references; 0 unresolved inclusions; 1 syntax errors; 9 unresolved names (0.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 08:29:57.698
+!MESSAGE Indexed 'Clock' (4 sources, 130 headers) in 19.31 sec: 9,429 declarations; 15,289 references; 1 unresolved inclusions; 1 syntax errors; 10 unresolved names (0.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 08:32:11.058
+!MESSAGE Indexed 'Alsa' (2 sources, 253 headers) in 35.28 sec: 22,263 declarations; 26,388 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 08:32:46.852
+!MESSAGE Indexed 'Clock' (4 sources, 204 headers) in 22.47 sec: 12,788 declarations; 21,850 references; 0 unresolved inclusions; 1 syntax errors; 10 unresolved names (0.03%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-19 09:02:49.194
+!MESSAGE Indexed 'Clock' (6 sources, 243 headers) in 34.41 sec: 18,418 declarations; 25,361 references; 0 unresolved inclusions; 1 syntax errors; 14 unresolved names (0.03%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-22 06:52:29.494
+!MESSAGE Indexed 'Clock' (6 sources, 245 headers) in 36.03 sec: 18,481 declarations; 25,652 references; 0 unresolved inclusions; 1 syntax errors; 19 unresolved names (0.04%)
+!SESSION 2016-02-24 07:26:31.882 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-24 07:37:48.749
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-02-24 09:50:21.070 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-24 10:01:31.003
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-03-18 11:10:46.602 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-18 15:38:39.272
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-03-19 05:59:03.318 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-19 06:04:30.962
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-03-19 09:06:28.725 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-19 09:07:27.374
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-03-21 08:52:07.690 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-21 09:07:08.694
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-03-30 08:06:20.392 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-30 08:48:41.008
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-03-30 09:46:54.755 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-03-30 09:47:11.331
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-30 09:47:55.772
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-02 08:22:28.593 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-02 08:28:17.125
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-02 09:27:04.533 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-02 09:28:07.763
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.ui 4 0 2016-04-02 09:43:40.233
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element Clock.cpp does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:484)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:566)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:341)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:607)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:367)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:63)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:87)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:358)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2016-04-02 09:43:40.250
+!MESSAGE Element Clock.cpp does not exist.
+!SESSION 2016-04-02 15:39:38.827 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-02 15:52:53.030
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-03 08:16:07.745 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-03 08:31:49.930
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-03 15:48:28.664 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-03 15:53:12.225
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-03 17:02:40.098 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-03 17:12:26.075
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-04 08:22:08.579 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-04 08:23:07.358
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-08 06:53:31.097 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-08 07:14:12.748
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-09 08:33:22.143 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-09 08:34:48.770
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-14 05:50:12.602 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-14 06:34:04.746
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-15 07:47:58.525 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-15 07:51:29.761
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-16 08:32:34.226 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-04-16 08:32:57.692
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2016-04-18 05:28:00.740 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-18 05:32:46.646
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-29 15:58:53.572 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-29 16:11:40.965
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-04-29 16:53:23.658 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-29 16:55:48.925
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-05-01 09:33:44.550 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-05-01 09:34:11.378
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-01 09:40:29.399
+!MESSAGE no spawner in java.library.path
+!SESSION 2016-05-01 09:45:21.594 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=arm, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-05-01 09:45:40.599
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-05-01 09:47:48.049
+!MESSAGE no spawner in java.library.path

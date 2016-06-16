@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Clock/WestminsterChime.cpp&apos; to &apos;TimedSound.cpp&apos;" description="Rename resource &apos;WestminsterChime.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WestminsterChime.cpp" name="TimedSound.cpp" stamp="1456411361394" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Clock/WestminsterChime.h&apos; to &apos;TimedSound.h&apos;" description="Rename resource &apos;WestminsterChime.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WestminsterChime.h" name="TimedSound.h" stamp="1456411385878" updateReferences="true"/>
+</session>

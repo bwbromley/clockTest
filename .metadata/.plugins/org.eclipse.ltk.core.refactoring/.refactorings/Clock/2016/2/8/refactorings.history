@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Clock/Neopixels.h&apos; to &apos;Neopixels.hx&apos;" description="Rename resource &apos;Neopixels.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Neopixels.h" name="Neopixels.hx" stamp="1455880321204" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Clock/Neopixels.cpp&apos; to &apos;Neopixels.cppx&apos;" description="Rename resource &apos;Neopixels.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Neopixels.cpp" name="Neopixels.cppx" stamp="1455880331735" updateReferences="true"/>
+</session>

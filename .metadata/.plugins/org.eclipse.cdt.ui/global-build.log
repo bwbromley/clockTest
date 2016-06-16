@@ -1,0 +1,11 @@
+09:48:01 **** Build of configuration Default for project Clock ****
+make all 
+g++ -c -g  -std=c++11 -I../Neopixel -I../LibSerial -I../Alsa AudioPlayer.cpp -o AudioPlayer.o
+g++ -c -g  -std=c++11 -I../Neopixel -I../LibSerial -I../Alsa Clock.cpp -o Clock.o
+g++ -c -g  -std=c++11 -I../Neopixel -I../LibSerial -I../Alsa ClockPart.cpp -o ClockPart.o
+g++ -c -g  -std=c++11 -I../Neopixel -I../LibSerial -I../Alsa PixelRing.cpp -o PixelRing.o
+g++ -c -g  -std=c++11 -I../Neopixel -I../LibSerial -I../Alsa SerialReader.cpp -o SerialReader.o
+g++ -c -g  -std=c++11 -I../Neopixel -I../LibSerial -I../Alsa TimedSound.cpp -o TimedSound.o
+g++ -g -o clock Clock.o PixelRing.o ClockPart.o SerialReader.o \
+		../Neopixel/libws2811.a ../LibSerial/libSerial.a TimedSound.o \
+		AudioPlayer.o ../Alsa/Player.o -lasound -pthread

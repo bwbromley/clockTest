@@ -1,0 +1,9 @@
+16:47:34 **** Build of configuration Default for project Neopixel ****
+make clean 
+rm -f *.a
+rm -f *.o
+rm -f test
+rm -f clock
+
+16:47:34 Build Finished (took 113ms)
+

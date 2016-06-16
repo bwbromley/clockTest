@@ -1,0 +1,6 @@
+16:47:29 **** Build of configuration Default for project ThreadTest ****
+make clean 
+rm -f *.o
+
+16:47:29 Build Finished (took 76ms)
+

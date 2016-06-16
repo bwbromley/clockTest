@@ -1,0 +1,73 @@
+/*
+ * Clock.h
+ *
+ *  Created on: Feb 19, 2016
+ *      Author: bromley
+ *
+ * The first piece of audio played after opening the AudioPlayer is
+ * is truncated at the beginning.  Keeping the AudioPlayer open seems
+ * to solve this.  As a result, all the audio files played need to be the
+ * same format.
+ *
+ *  Speech synthesized using http://www.text2speech.org/
+ *  To convert to 44100 Hz 16 bit signed LE stereo
+ *      sox -S input.wav output.wav channels 2 rate -L -s 44100
+ *
+ *  Requires libasound.so.2 (apt-get install libasound2)
+ */
+
+#ifndef CLOCK_H_
+#define CLOCK_H_
+
+#include "ClockPart.h"
+#include "PixelRing.h"
+#include "SerialReader.h"
+#include "AudioPlayer.h"
+#include <vector>
+#include <string>
+
+using std::vector;
+using std::string;
+
+class TimedSound;
+
+class Clock {
+public:
+	Clock();
+	virtual ~Clock();
+	PixelRing pixelRing;
+	SerialReader serialReader;
+	AudioPlayer audioPlayer;
+	TimedSound* timedSound;
+	void start();
+	void playAudio(string pathName);
+	void playAudio(vector<string> filePaths);
+	void serialCommand(string& command);
+	void setBrightness(unsigned char brightness);
+	void scaleBrightnessToAmbientLight();
+	void setDisablePixelUpdate(bool value);
+	bool getDisablePixelUpdate();
+private:
+	bool disablePixelUpdate;
+	int volume;
+	int ambientLightIntensity;
+	void parseLightIntensity(string valueString);
+	int parseDigit(string digitString);
+	int clockState;
+	int numDigitsReceived;
+	static int stateIdle;
+	static int stateError;
+	static int stateGetAlarmTime;
+	static int stateSetAlarmTime;
+	static int stateGetAlarmAm;
+	static int statePlayMenu;
+	static int stateGetFourDigits;
+	void initialize();
+	void toggleMuteChime();
+	void toggleMuteAlarm();
+	int getDigit(string value);
+	int alarmValue;
+	void setAlarm();
+};
+
+#endif /* CLOCK_H_ */
